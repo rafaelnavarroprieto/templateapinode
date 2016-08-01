@@ -35,3 +35,11 @@ Dentro del directorio controller tendremos cada directorio con su controlador co
 El controlador users tiene los métodos CRUD correspondiente de la tabla usuarios donde el método de creación del usuario es el único que valida la petición a través del token. Este método está pensado para que cualquier usuario pueda registrarse en la app y posteriormente tenga que loguearse para poder obtener el token de ese usuario correspondiente.
 
 Además de tener un control por token, se puede observar otro nivel de control en los métodos new y update donde se valida que los campos coinciden con los campos de la base de datos y no tiene efecto la acción si no están dichos campos.
+
+## Cosas a tener en cuenta
+
+Esta plantilla está realizada para servir de guía y no como algo final, dentro de los elementos que hemos hablado anteriormente hay mencionar las siguientes cosas:
++ El controlador users es un ejemplo genérico de controlador con métodos CRUD
++ Para crear el controlador users como un ejemplo real además de validar por token se deberá comprobar que el token corresponde a un administrador o usuarios con permisos
++ El tipo de base de datos puede modificarse añadiendo la librería correspondiente y adaptando las peticiones
+
