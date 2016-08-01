@@ -40,6 +40,6 @@ Además de tener un control por token, se puede observar otro nivel de control e
 
 Esta plantilla está realizada para servir de guía y no como algo final, dentro de los elementos que hemos hablado anteriormente hay mencionar las siguientes cosas:
 + El controlador users es un ejemplo genérico de controlador con métodos CRUD
-+ Para crear el controlador users como un ejemplo real además de validar por token se deberá comprobar que el token corresponde a un administrador o usuarios con permisos
++ Para crear el controlador users como un caso real además de validar por token se deberá comprobar que el token corresponde a un administrador o usuarios con permisos
 + El tipo de base de datos puede modificarse añadiendo la librería correspondiente y adaptando las peticiones
 
