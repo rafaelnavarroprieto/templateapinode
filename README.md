@@ -42,4 +42,20 @@ Esta plantilla está realizada para servir de guía y no como algo final, dentro
 + El controlador users es un ejemplo genérico de controlador con métodos CRUD
 + Para crear el controlador users como un caso real además de validar por token se deberá comprobar que el token corresponde a un administrador o usuarios con permisos
 + El tipo de base de datos puede modificarse añadiendo la librería correspondiente y adaptando las peticiones
++ El controlador users tiene una línea de validación donde comprueba que los campos enviados son correcto, para que funcione debe haber una entrada de usuario, en este caso el usuario admin, para que la petición cuyo id de usuario es 1 no de error y no funcione. 
+
+        var query = squel.select().from("users").where("id = ?",1).toString();
+			  connection.query(query,(err,rows) =>{
+				  var paramsUsers = [];
+				  for( name in rows[0]){
+					  if (name !=  "id" && name != "create_at" && name != "update_at" && name != "token") {
+						  paramsUsers.push(name);
+					  }
+				  }
+				  if (!_.isEqual(paramRequest , paramsUsers)) {
+					  res.json({"Error" : true, "Message" : "need more params"});
+					  return
+			  	}
+
++ En caso de ser otro tipo de controlador donde no hay entradas previas a la creación de ellas, se podria tener un modelo con los campos de cada tabla y en vez de realizar una consulta para ver las columnas de la tabla, acceder al modelo de cada tabla y validar cada campo enviado con los campos requeridos.
 
