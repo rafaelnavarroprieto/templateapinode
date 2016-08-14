@@ -57,5 +57,5 @@ Esta plantilla está realizada para servir de guía y no como algo final, dentro
 					  return
 			  	}
 
-+ En caso de ser otro tipo de controlador donde no hay entradas previas a la creación de ellas, se podria tener un modelo con los campos de cada tabla y en vez de realizar una consulta para ver las columnas de la tabla, acceder al modelo de cada tabla y validar cada campo enviado con los campos requeridos.
++ En caso de ser otro tipo de controlador donde no hay entradas previas a la creación de ellas, se podría tener un modelo con los campos de cada tabla y en vez de realizar una consulta para ver las columnas de la tabla, acceder al modelo de cada tabla y validar cada campo enviado con los campos requeridos.
 
